@@ -1,0 +1,26 @@
+package br.com.secretm.secret_api.controller;
+
+import br.com.secretm.secret_api.dto.UsuarioRequestDTO;
+import br.com.secretm.secret_api.model.Usuario;
+import br.com.secretm.secret_api.service.UsuarioService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+@CrossOrigin(origins = "http://localhost:5173")
+@RestController
+@RequestMapping("/usuario")
+public class UsuarioController {
+    //1. Injeção de Dependencia
+    private final UsuarioService usuarioService;
+
+    public UsuarioController(UsuarioService usuarioService) {
+        this.usuarioService = usuarioService;
+    }
+
+    //2. Métdodo Posting
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Usuario postUsuario(@RequestBody @Valid UsuarioRequestDTO request) {
+        return this.usuarioService.criarUsuario(request.getNick());
+    }
+}
