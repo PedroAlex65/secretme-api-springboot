@@ -6,11 +6,7 @@ import br.com.secretm.secret_api.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-<<<<<<< HEAD
 @CrossOrigin(origins = "https://secretme-frontend-react.vercel.app")
-=======
-@CrossOrigin(origins = "https://secretme-frontend-react-e9to.vercel.app")
->>>>>>> 462553d88fef2fae1bfcaef132afdc4eb9f4189a
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioController {
