@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @CrossOrigin(origins = "https://secretme-frontend-react.vercel.app")
+                        
 @RestController
 @RequestMapping("/api/mensagens")
 @ResponseStatus(HttpStatus.CREATED)
