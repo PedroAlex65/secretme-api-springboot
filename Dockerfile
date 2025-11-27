@@ -7,7 +7,7 @@ COPY . .
 RUN apt-get install maven -y
 RUN mvn clean install
 
-FROM openjdk:17-jre
+FROM maven:3.8.1-openjdk-17
 
 EXPOSE 8080
 COPY --from=build /app/target/secret-api-0.0.1-SNAPSHOT.jar app.jar
