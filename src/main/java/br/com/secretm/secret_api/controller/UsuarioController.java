@@ -6,6 +6,8 @@ import br.com.secretm.secret_api.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 @CrossOrigin(origins = {
     "https://secretme-frontend-react.vercel.app", 
     "https://secretme-frontend-react-k2wwv5zvf-pedroalex65s-projects.vercel.app" 
