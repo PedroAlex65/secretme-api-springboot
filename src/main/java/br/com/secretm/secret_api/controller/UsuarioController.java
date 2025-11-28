@@ -26,4 +26,16 @@ public class UsuarioController {
     public Usuario postUsuario(@RequestBody @Valid UsuarioRequestDTO request) {
         return this.usuarioService.criarUsuario(request.getNick());
     }
+
+     // 2. Método getNick completo
+    @GetMapping("/usuario/nick")
+    public String getNick(@RequestParam("token") String token) {
+
+        return usuarioService.buscarUsuario(token)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Token de usuário inválido."
+                ))
+                .getNick();
+    }
 }
