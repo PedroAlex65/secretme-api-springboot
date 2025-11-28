@@ -4,6 +4,7 @@ import br.com.secretm.secret_api.model.Usuario;
 import br.com.secretm.secret_api.repository.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
+import java.util.Optional;
 
 import java.util.UUID;
 
