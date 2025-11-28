@@ -27,4 +27,9 @@ public class UsuarioService {
         novoUsuario.setSecretToken(gerarTokenSecreto());
         return this.usuarioRepository.save(novoUsuario);
     }
+
+     //Pegar Usuario
+    public Optional<Usuario> buscarUsuario(String userToken){
+        return usuarioRepository.findBySecretToken(userToken);
+    }
 }
