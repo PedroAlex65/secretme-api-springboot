@@ -7,10 +7,10 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.http.HttpStatus;
 @CrossOrigin(origins = {
     "https://secretme-frontend-react.vercel.app", 
-    "https://secretme-frontend-react-k2wwv5zvf-pedroalex65s-projects.vercel.app" 
+    "https://secretme-frontend-react-k2wwv5zvf-pedroalex65s-projects.vercel.app",
+    "https://secretme-frontend-react-2exipxsao-pedroalex65s-projects.vercel.app"
 })
 @RestController
 @RequestMapping("/usuario")
@@ -30,7 +30,7 @@ public class UsuarioController {
     }
 
      // 2. Método getNick completo
-    @GetMapping("/usuario/nick")
+    @GetMapping("/nick")
     public String getNick(@RequestParam("token") String token) {
 
         return usuarioService.buscarUsuario(token)
